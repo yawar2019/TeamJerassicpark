@@ -147,5 +147,89 @@ namespace TeamJerassicpark.Controllers
             return View(obj);
         }
 
+        public ViewResult GetMeView9(int? id) {
+
+            return View();
+        }
+        public RedirectResult RedirectToGoogle()
+        {
+            return Redirect("http://www.google.com");
+        }
+        public RedirectResult RedirectToGoogle2()
+        {
+            return Redirect("~/New/GetMeView9?id=1");
+        }
+
+        public FileResult getMeFile()
+        {
+            return File("~/Web.config","text/plain");
+        }
+
+        public FileResult getMeFile2()
+        {
+            return File("~/Web.config", "application/xml");
+        }
+
+        public FileResult getMeFile3()
+        {
+            return File("~/ActionResult.pdf", "application/pdf", "ActionResult.pdf");
+        }
+
+        public ActionResult getmepartialView()
+        {
+            return View();
+        }
+
+        public ActionResult getmepartialView2()
+        {
+            EmployeeModel emp = new EmployeeModel();
+            emp.EmpId = 1;
+            emp.EmpName = "Ritu";
+            emp.EmpSalary = 12345;
+
+            EmployeeModel emp1 = new EmployeeModel();
+            emp1.EmpId = 1;
+            emp1.EmpName = "Hitesh";
+            emp1.EmpSalary = 450000;
+
+            EmployeeModel emp2 = new EmployeeModel();
+            emp2.EmpId = 3;
+            emp2.EmpName = "Bala";
+            emp2.EmpSalary = 650000;
+
+            List<EmployeeModel> listEmp = new List<EmployeeModel>();
+            listEmp.Add(emp);
+            listEmp.Add(emp1);
+            listEmp.Add(emp2);
+
+
+            return View(listEmp);
+        }
+
+        public PartialViewResult getmepartialView3()
+        {
+            EmployeeModel emp = new EmployeeModel();
+            emp.EmpId = 1;
+            emp.EmpName = "Ritu";
+            emp.EmpSalary = 12345;
+
+            EmployeeModel emp1 = new EmployeeModel();
+            emp1.EmpId = 1;
+            emp1.EmpName = "Hitesh";
+            emp1.EmpSalary = 450000;
+
+            EmployeeModel emp2 = new EmployeeModel();
+            emp2.EmpId = 3;
+            emp2.EmpName = "Bala";
+            emp2.EmpSalary = 650000;
+
+            List<EmployeeModel> listEmp = new List<EmployeeModel>();
+            listEmp.Add(emp);
+            listEmp.Add(emp1);
+            listEmp.Add(emp2);
+
+
+            return PartialView("_myListPartialView", listEmp);
+        }
     }
 }

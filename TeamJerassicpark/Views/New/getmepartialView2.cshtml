@@ -1,0 +1,22 @@
+﻿@model List<TeamJerassicpark.Models.EmployeeModel>
+@{
+    ViewBag.Title = "getmepartialView2";
+}
+
+<h2>getmepartialView2</h2>
+
+@{
+    var s = Html.Partial("_myListPartialView", Model);
+    int a = 10;
+    if (a == 10) {
+
+        @s
+    }
+
+}
+
+
+@{
+     Html.RenderPartial("_myListPartialView", Model);
+
+}
