@@ -120,7 +120,7 @@ namespace TeamJerassicpark.Controllers
             return View(listObj);
         }
         //hitesh
-        public ActionResult GetMeView8()
+        public ActionResult GetMeView8(EmployeeModel emp123)
         {
             List<EmployeeModel> listObj = new List<EmployeeModel>();
             EmployeeModel emp = new EmployeeModel();
@@ -230,6 +230,56 @@ namespace TeamJerassicpark.Controllers
 
 
             return PartialView("_myListPartialView", listEmp);
+        }
+
+        public JsonResult getmejsoninfo()
+        {
+            EmployeeModel emp = new EmployeeModel();
+            emp.EmpId = 1;
+            emp.EmpName = "Ritu";
+            emp.EmpSalary = 12345;
+
+            EmployeeModel emp1 = new EmployeeModel();
+            emp1.EmpId = 1;
+            emp1.EmpName = "Hitesh";
+            emp1.EmpSalary = 450000;
+
+            EmployeeModel emp2 = new EmployeeModel();
+            emp2.EmpId = 3;
+            emp2.EmpName = "Bala";
+            emp2.EmpSalary = 650000;
+
+            List<EmployeeModel> listEmp = new List<EmployeeModel>();
+            listEmp.Add(emp);
+            listEmp.Add(emp1);
+            listEmp.Add(emp2);
+
+            return Json(listEmp,JsonRequestBehavior.AllowGet);
+        }
+
+        public ContentResult getmeContent(int? id)
+        {
+            if (id == 1)
+            {
+                return Content("Hello Ritu");
+            }
+            else if (id == 2)
+            {
+                return Content("<p style=color:red>Hello Ritu</p>");
+            }
+            else {
+                return Content("<script>alert('Hello Ritu')</script>");
+            }
+        }
+
+        public RedirectToRouteResult getmetoOtherAction()
+        {
+            EmployeeModel emp = new EmployeeModel();
+            emp.EmpId = 1;
+            emp.EmpName = "Ritu";
+            emp.EmpSalary = 12345;
+
+            return RedirectToAction("GetMeView8", emp);
         }
     }
 }
