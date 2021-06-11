@@ -1,6 +1,7 @@
 ﻿@model List<AdonetExample.Models.EmployeeModel>
 @{
     ViewBag.Title = "Index";
+    
 }
 
 <h2>Index</h2>
@@ -19,11 +20,29 @@
             <td>@item.EmpName</td>
             <td>@item.EmpSalary</td>
             <td>
-                @Html.ActionLink("Edit","Edit",new {id=@item.EmpId})
+                @Html.ActionLink("Edit", "Edit", new { id = @item.EmpId })
                 @Html.ActionLink("Delete", "Delete", new { id = @item.EmpId })
-            
+
             </td>
         </tr>
     }
 </table>
 
+@section  mysection
+{
+    <ul>
+        <li>tea</li>
+        <li>coffee</li>
+        <li>Irani chai</li>
+    </ul>
+}
+
+
+@section  HeaderSection
+{
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+}
