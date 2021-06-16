@@ -81,5 +81,25 @@ namespace AdonetExample.Controllers
 
             return View(emp);
         }
+      
+        public ActionResult ViewDataExample()
+        {
+            ViewData["Username"] = "ritu";
+            ViewBag.Lastname = "Menal";
+            TempData["FirstName"]="Vaishali";
+
+
+            return View();
+        }
+        public ActionResult ViewDataExample2()
+        {
+            string Name =(string) ViewData["Username"];
+            string Lastname = ViewBag.LastName;
+            //string FirstName =(string)TempData["FirstName"];
+            //TempData.Keep();
+            string FirstName = TempData.Peek("FirstName").ToString();//valueread and retain
+            return View();
+        }
+
     }
 }
