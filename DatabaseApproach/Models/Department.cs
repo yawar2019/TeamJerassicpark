@@ -12,15 +12,10 @@ namespace DatabaseApproach.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class employeeDetail
+    public partial class Department
     {
-        public int EmpId { get; set; }
-        public string EmpName { get; set; }
-        public Nullable<int> EmpSalary { get; set; }
-        public Nullable<int> DeptId { get; set; }
-        public string Designation { get; set; }
-        public string Address { get; set; }
-        public Nullable<System.DateTime> dob { get; set; }
-        public bool Status { get; set; }
+        public int DeptId { get; set; }
+        public string DeptName { get; set; }
+        public string Description { get; set; }
     }
 }
