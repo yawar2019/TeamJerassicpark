@@ -7,19 +7,15 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DatabaseApproach.Models
+namespace ModelBasedApproach.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class employeeDetail
+    public partial class EmployeeDetail
     {
-        public int EmpId { get; set; }
+        public int Id { get; set; }
         public string EmpName { get; set; }
-        public Nullable<int> EmpSalary { get; set; }
-        public Nullable<int> DeptId { get; set; }
-        public string Address { get; set; }
-        public Nullable<System.DateTime> dob { get; set; }
-        public bool Status { get; set; }
+        public int EmpSalary { get; set; }
     }
 }

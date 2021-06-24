@@ -1,4 +1,4 @@
-﻿@model IEnumerable<DatabaseApproach.Models.EmployeeAndDepartment>
+﻿@model IEnumerable<DatabaseApproach.Models.employeeDetail>
 
 @{
     ViewBag.Title = "Index";
@@ -23,9 +23,17 @@
         <th>
             @Html.DisplayNameFor(model => model.DeptId)
         </th>
+        
         <th>
-            @Html.DisplayNameFor(model => model.DeptName)
+            @Html.DisplayNameFor(model => model.Address)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dob)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        
         <th></th>
     </tr>
 
@@ -43,9 +51,17 @@
         <td>
             @Html.DisplayFor(modelItem => item.DeptId)
         </td>
+         
         <td>
-            @Html.DisplayFor(modelItem => item.DeptName)
+            @Html.DisplayFor(modelItem => item.Address)
         </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dob)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+       
         <td>
             @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
             @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
