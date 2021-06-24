@@ -123,5 +123,14 @@ namespace ModelBasedApproach.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult HtmlHelperExample()
+        {
+            EmployeeDetail det = new EmployeeDetail();
+            det.EmpName = "Sahoo bahubali";
+            det.EmpSalary = 1450000;
+            det.status = true;
+            return View(det);
+        }
     }
 }

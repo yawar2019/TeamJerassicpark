@@ -1,0 +1,31 @@
+﻿@model  ModelBasedApproach.Models.EmployeeDetail
+
+@{
+    ViewBag.Title = "HtmlHelperExample";
+}
+
+<h2>HtmlHelperExample</h2>
+
+<script>
+    //function fun()
+    //{
+    //    var a = document.getElementById('Num1').value;
+    //    var b = document.getElementById('Num2').value;
+    //    var c = parseInt(a) + parseInt(b);
+    //    alert(c);
+    //}
+
+    function fun(a) {
+        var c = parseInt(a) * parseInt(a);
+        alert(c);
+    }
+
+
+</script>
+
+<input type="text" id="Num1" name="name" value="Ritu" style="background-color:pink" class="form-control" onclick="fun(12)"  /><br />
+@Html.TextBox("FirstName","Menal",new { style = "background-color:skyblue" ,@class="form-control",id="Num2", onclick = "fun()" })
+@Html.TextBoxFor(s=>s.EmpName, new { style = "background-color:skyblue", @class = "form-control", id = "Num2", onclick = "fun()" })
+@Html.EditorFor(s => s.EmpName)
+@Html.EditorFor(s => s.EmpSalary)
+@Html.EditorFor(s => s.status)

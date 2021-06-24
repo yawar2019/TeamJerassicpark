@@ -17,5 +17,6 @@ namespace ModelBasedApproach.Models
         public int Id { get; set; }
         public string EmpName { get; set; }
         public int EmpSalary { get; set; }
+        public bool status { get; set; }
     }
 }
