@@ -129,8 +129,30 @@ namespace ModelBasedApproach.Controllers
             EmployeeDetail det = new EmployeeDetail();
             det.EmpName = "Sahoo bahubali";
             det.EmpSalary = 1450000;
-            det.status = true;
+            
+            ViewBag.EmployeeName = new SelectList(db.EmployeeDetails, "Id", "EmpName", 4);
             return View(det);
         }
+        public ActionResult ClientSideValidation()
+        {
+
+            return View();
+        }
+        [HttpPost]
+      
+        public ActionResult ClientSideValidation(RegistrationModel reg)
+        {
+            if (ModelState.IsValid)
+            {
+                return Redirect("~/EmployeeDetails/ClientSideValidation");
+
+            }
+            else
+            {
+                return View(reg);
+            }
+        }
     }
+
+
 }

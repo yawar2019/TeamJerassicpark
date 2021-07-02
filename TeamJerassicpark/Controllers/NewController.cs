@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using TeamJerassicpark.Filter;
 using TeamJerassicpark.Models;
 
 namespace TeamJerassicpark.Controllers
 {
+   
     public class NewController : Controller
     {
         // GET: New
@@ -19,6 +21,7 @@ namespace TeamJerassicpark.Controllers
             return "Hello World";
         }
 
+        [MyFilter]
         public int Index2()
         {
             return 1;
@@ -272,14 +275,22 @@ namespace TeamJerassicpark.Controllers
             }
         }
 
+       
         public RedirectToRouteResult getmetoOtherAction()
         {
+            
             EmployeeModel emp = new EmployeeModel();
             emp.EmpId = 1;
             emp.EmpName = "Ritu";
             emp.EmpSalary = 12345;
 
             return RedirectToAction("GetMeView8", emp);
+        }
+        [MyFilter]
+        public ViewResult GetPlayer()
+        {
+            ViewBag.Player = "Dhoni";
+            return View();
         }
     }
 }

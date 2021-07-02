@@ -7,15 +7,15 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ModelBasedApproach.Models
+namespace TeamJerassicpark.Models
 {
     using System;
     using System.Collections.Generic;
     
-    public partial class EmployeeDetail
+    public partial class UserRoleMapping
     {
-        public int Id { get; set; }
-        public string EmpName { get; set; }
-        public int EmpSalary { get; set; }
+        public int id { get; set; }
+        public Nullable<int> EmpId { get; set; }
+        public Nullable<int> RoleId { get; set; }
     }
 }
