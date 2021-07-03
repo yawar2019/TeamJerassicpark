@@ -12,18 +12,18 @@ namespace TeamJerassicpark.Controllers
     {
         // GET: Test
 
-        [Authorize]
+        [Authorize(Roles="Admin,Manager")]
         public ActionResult Index()
         {
             return View();
         }
 
-        [Authorize]
+        [Authorize(Roles ="Admin")]
         public ActionResult ContactUS()
         {
             return View();
         }
-        [Authorize]
+        [Authorize(Roles = "Manager")]
         public ActionResult AboutUS()
         {
             return View();

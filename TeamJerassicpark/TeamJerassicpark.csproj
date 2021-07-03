@@ -163,7 +163,9 @@
     <Content Include="scripts\jquery.validate.unobtrusive.js" />
     <Content Include="scripts\jquery.validate.unobtrusive.min.js" />
     <Content Include="scripts\modernizr-2.6.2.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -176,6 +178,7 @@
     <Compile Include="Models\Department.cs" />
     <Compile Include="Models\EmpDept.cs" />
     <Compile Include="Models\EmployeeModel.cs" />
+    <Compile Include="Models\MyRoleProvider.cs" />
     <Compile Include="Models\Role.cs">
       <DependentUpon>_LoginModel.tt</DependentUpon>
     </Compile>
