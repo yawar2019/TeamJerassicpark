@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamJerassicpark", "TeamJerassicpark\TeamJerassicpark.csproj", "{DF67C272-11C5-4BAD-A8DC-125A9501703D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9DF6A465-4FE9-490B-9CCC-7E98B35B1D7F} = {9DF6A465-4FE9-490B-9CCC-7E98B35B1D7F}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdonetExample", "AdonetExample\AdonetExample.csproj", "{DCD1BC65-5BA8-40F7-A1C3-878FD00FABA6}"
 EndProject
@@ -12,6 +15,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodeFirstApproach", "CodeFirstApproach\CodeFirstApproach.csproj", "{97748BF6-810A-43E6-811E-1B14FA141C1B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelBasedApproach", "ModelBasedApproach\ModelBasedApproach.csproj", "{998B0A60-46E2-49A4-A6D6-54217CD3BA17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyWebService", "MyWebService\MyWebService.csproj", "{9DF6A465-4FE9-490B-9CCC-7E98B35B1D7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WcfServiceExample", "WcfServiceExample\WcfServiceExample.csproj", "{35D57960-08CD-4889-972B-2A095FEA8FB3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +46,14 @@ Global
 		{998B0A60-46E2-49A4-A6D6-54217CD3BA17}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{998B0A60-46E2-49A4-A6D6-54217CD3BA17}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{998B0A60-46E2-49A4-A6D6-54217CD3BA17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DF6A465-4FE9-490B-9CCC-7E98B35B1D7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DF6A465-4FE9-490B-9CCC-7E98B35B1D7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DF6A465-4FE9-490B-9CCC-7E98B35B1D7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DF6A465-4FE9-490B-9CCC-7E98B35B1D7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35D57960-08CD-4889-972B-2A095FEA8FB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35D57960-08CD-4889-972B-2A095FEA8FB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35D57960-08CD-4889-972B-2A095FEA8FB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35D57960-08CD-4889-972B-2A095FEA8FB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

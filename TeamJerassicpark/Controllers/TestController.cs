@@ -46,5 +46,19 @@ namespace TeamJerassicpark.Controllers
 
             return View(user);
         }
+
+        public ActionResult ConSumeWebService()
+        {
+            ServiceReference1.WebService1SoapClient obj = new ServiceReference1.WebService1SoapClient();
+
+            return View(obj.GetEmployeeData().ToList());
+        }
+
+        public ActionResult ConSumeWCFService()
+        {
+            ServiceReference2.Service1Client obj = new ServiceReference2.Service1Client("NetTcpBinding_IService1");
+
+            return Content(obj.Add(10,20).ToString());
+        }
     }
 }
